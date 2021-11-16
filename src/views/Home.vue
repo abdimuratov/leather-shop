@@ -1,15 +1,21 @@
 <template>
   <div>
     <WideImageCard />
+    <CarouselCard />
+    <PromotionCard />
   </div>
 </template>
 
 <script>
 import WideImageCard from '../components/WideImageCard.vue'
+import CarouselCard from '../components/CarouselCard.vue'
+import PromotionCard from '../components/PromotionCard.vue'
 
 export default {
   components: {
     WideImageCard,
+    CarouselCard,
+    PromotionCard,
   }
 }
 </script>
