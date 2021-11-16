@@ -28,7 +28,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: fit-content;
   padding-bottom: 90px;
 
   &-background {
@@ -79,10 +79,15 @@
   font-size: 24px;
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1920px) {
+  .promotion {
+    min-height: 70vh;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .promotion {
     padding-bottom: 50px;
-    height: fit-content;
   }
 
   .title {
