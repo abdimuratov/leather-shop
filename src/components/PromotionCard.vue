@@ -1,7 +1,7 @@
 <template>
   <div class="card-margin promotion">
     <div class="promotion-background"></div>
-    <div style="z-index: -1;" class="dark-background"></div>
+    <div style="z-index: -1" class="dark-background"></div>
     <img src="../assets/images/sticker.png" alt="" class="promotion-sticker" />
 
     <div class="promotion-info">
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   height: 70vh;
-  padding: 0 0 90px 0;
+  padding-bottom: 90px;
 
   &-background {
     position: absolute;
@@ -46,6 +46,7 @@
     top: 16px;
     left: 16px;
     width: 10%;
+    z-index: -1;
   }
 
   &-info {
@@ -54,18 +55,18 @@
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 90px;
+    padding: 75px 90px;
   }
 
-&-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  &-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-  &:not(:last-child):after {
-    margin-right: 76px;
+    & button:not(:last-child) {
+      margin-right: 76px;
+    }
   }
-}
 }
 
 .title {
@@ -76,5 +77,56 @@
   display: flex;
   flex-direction: column;
   font-size: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .promotion {
+    padding-bottom: 50px;
+    height: fit-content;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .promotion {
+    &-info {
+      padding: 50px 40px;
+    }
+    
+    &-links {
+      & button:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+}
+
+@media screen and(max-width: 424px) {
+  .promotion {
+    &-links {
+      flex-direction: column;
+      align-items: center;
+
+      & button:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
 </style>

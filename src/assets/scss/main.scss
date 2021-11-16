@@ -33,10 +33,12 @@ body {
   font-weight: 300;
   border: 0;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+	width: fit-content;
 
   &:hover {
-    transform: scale(1.5) perspective(1px);
-    background-color: #ff5454;
+    transform: scale(1.04) perspective(1px);
   }
 }
 
@@ -75,11 +77,6 @@ body {
       margin: 0;
       padding: 0;
       transition-duration: 0.3s;
-
-      @media screen and (max-width: 767px) {
-        width: 8px;
-        height: 8px;
-      }
     }
     &--current,
     &:hover {
@@ -111,10 +108,32 @@ body {
   height: 50vh;
   object-fit: cover;
   width: 100%;
+}
 
-  @media screen and (max-width: 1023px) {
-    height: 200px;
-  }
+@media screen and (max-width: 1024px) {
+	.big-button {
+		font-size: 18px;
+		padding: 16px 40px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.slide {
+		height: 200px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.agile__dot {
+		button {
+			width: 8px;
+			height: 8px;
+		}
+	}
+
+	.big-button {
+		font-size: 12px;
+	}
 }
 
 .icon {
